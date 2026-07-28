@@ -1,0 +1,29 @@
+@using EventEase.Models
+@using EventEase.Services
+@inject NavigationManager NavManager
+@inject EventService EventService
+@page "/events/{id:int}"
+
+@code
+{
+    [Parameter]
+    public int Id {get; set;}
+    private Event anEvent;
+
+    protected override void OnParametersSet()
+    {
+        // fetch event
+        anEvent = EventService.GetEvent(Id);
+        if (anEvent == null) NavManager.NavigateTo("/not-found");
+    }
+}
+
+<h1>Event</h1>
+<h2>Name:</h2>
+<p>@anEvent?.Name</p>
+<h2>Date:</h2>
+<p>@anEvent?.Date</p>
+<h2>Location:</h2>
+<p>@anEvent?.Location</p>
+<h2>Description:</h2>
+<p>@anEvent?.Description</p>

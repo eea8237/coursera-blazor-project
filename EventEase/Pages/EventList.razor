@@ -1,0 +1,10 @@
+@page "/event-list"
+@using EventEase.Services
+@inject EventService EventService
+
+@for (int i = 0; i < EventService.GetEventsList().Count; i++)
+{
+    <div class="event-box">
+        <p>@i: @EventService.GetEventsList()[i].Name</p>
+    </div>
+}

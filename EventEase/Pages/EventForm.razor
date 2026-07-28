@@ -1,0 +1,52 @@
+@using EventEase.Models
+@using EventEase.Services
+@inject EventService EventService
+@inject NavigationManager NavManager
+@page "/events"
+
+@code 
+{
+    [SupplyParameterFromForm]
+    private Event eventDetails {get; set;} = new Event();
+    private bool isSubmitted = false;
+    private bool seeEvents = false;
+    private void HandleSubmit() 
+    {
+        EventService.AddEvent(eventDetails);
+        Console.WriteLine($"Added event: \n{eventDetails}");
+        foreach (Event e in EventService.GetEventsList()) 
+        {
+            Console.WriteLine(e.Name);
+        }
+        eventDetails = new Event();
+    }
+}
+
+<EditForm Model="@eventDetails" OnValidSubmit="HandleSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <h1>Event Form</h1>
+    <div>
+        <label for="name">Event Name</label>
+        <InputText id="name" @bind-Value="eventDetails.Name" />
+    </div>
+    <div>
+        <label for="date">Date</label>
+        <InputText id="date" @bind-Value="eventDetails.Date" />
+    </div>
+    <div>
+        <label for="location">Location</label>
+        <InputText id="location" @bind-Value="eventDetails.Location" />
+    </div>
+    <div>
+        <label for="desc">Description</label>
+        <InputTextArea id="desc" @bind-Value="eventDetails.Description" />
+    </div>
+    <button type="submit">Submit</button>
+</EditForm>
+
+<button @onclick="() => seeEvents = !seeEvents">See/Hide Events</button>
+@if (seeEvents)
+{
+    <EventList />
+}
