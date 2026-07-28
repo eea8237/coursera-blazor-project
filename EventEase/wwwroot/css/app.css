@@ -113,3 +113,16 @@ code {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
+
+.user-data:focus {
+    border: .25vw solid cadetblue;
+}
+
+.user-data:hover {
+    border: .25vw solid cadetblue;
+}
+
+.user-data:active {
+    border: .25vw dotted lightblue;
+    color: cadetblue;
+}

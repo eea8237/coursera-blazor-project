@@ -1,0 +1,38 @@
+@page "/user-list"
+@using EventEase.Services
+@using EventEase.Models
+@inject UserService UserService
+
+@code
+{
+    [Parameter]
+    public EventCallback<User> OnUserSelected {get; set;}
+
+    private User currentUser;
+    private void HandleClick()
+    {
+        Console.WriteLine("click");
+        OnUserSelected.InvokeAsync(currentUser);
+    }
+}
+
+<h1>Users</h1>
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Set Current</th>
+    </thead>
+    <tbody>
+        @foreach (var user in UserService.GetUsersList()) 
+        {
+            <tr class="user-data" @onclick="HandleClick">
+                <td>@user.Name</td>
+                <td>@user.Email</td>
+                <td>@user.PhoneNumber</td>
+                <td><button @onclick="() => {currentUser=user; StateHasChanged();}">Set User</button></td>
+            </tr>
+        }
+    </tbody>
+</table>

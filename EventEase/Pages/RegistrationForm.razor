@@ -1,0 +1,46 @@
+@using EventEase.Models
+@using EventEase.Services
+@inject UserService UserService
+@inject NavigationManager NavManager
+@page "/registration"
+
+@code 
+{
+    [Parameter]
+    public EventCallback<User> OnUserAdded {get; set;}
+    
+    [SupplyParameterFromForm]
+    private User user {get; set;} = new User();
+    private bool isSubmitted = false;
+    private void HandleSubmit() 
+    {
+        OnUserAdded.InvokeAsync(user);
+        UserService.AddUser(user);
+        Console.WriteLine($"Added user: \n{user}");
+        foreach (User u in UserService.GetUsersList()) 
+        {
+            Console.WriteLine(u.Name);
+        }
+        user = new User();
+    }
+}
+
+
+<EditForm Model="@user" OnValidSubmit="HandleSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <h1>Attendee Form</h1>
+    <div>
+        <label for="name">Name</label>
+        <InputText id="name" @bind-Value="user.Name" />
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <InputText id="email" @bind-Value="user.Email" />
+    </div>
+    <div>
+        <label for="phone">Phone Number</label>
+        <InputText id="phone" @bind-Value="user.PhoneNumber" />
+    </div>
+    <button type="submit">Submit</button>
+</EditForm>

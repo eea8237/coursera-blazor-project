@@ -216,9 +216,6 @@ C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\
 C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat
 C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat
 C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat
-C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\EventEase.eqq68aghwa.wasm
-C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\EventEase.5ic50dwmwj.pdb
-C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\dotnet.zyite9rl6a.js
 C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\blazor.webassembly.66stpp682q.js.gz
 C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.1l4onz0xjo.wasm.gz
 C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Components.nyb7ae3bsc.wasm.gz
@@ -427,9 +424,6 @@ C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\
 C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat.gz
 C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat.gz
 C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat.gz
-C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\EventEase.eqq68aghwa.wasm.gz
-C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\EventEase.5ic50dwmwj.pdb.gz
-C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\dotnet.zyite9rl6a.js.gz
 C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\EventEase.staticwebassets.runtime.json
 C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\EventEase.staticwebassets.endpoints.json
 C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\EventEase.dll
@@ -854,7 +848,6 @@ C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\blazor.build.boot-e
 C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\dotnet.js
 C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\staticwebassets\htmlassetplaceholders\build\6ftpsips7z.html
 C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\compressed\f9o902iofb-{0}-99zm1jdh75-99zm1jdh75.gz
-C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\compressed\cfgi8klkso-{0}-nk9bgqz024-nk9bgqz024.gz
 C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\compressed\ol5ddtyvc6-{0}-bqjiyaj88i-bqjiyaj88i.gz
 C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\compressed\3jzrve89yq-{0}-c2jlpeoesf-c2jlpeoesf.gz
 C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\compressed\u4l69uusb7-{0}-erw9l3u2r3-erw9l3u2r3.gz
@@ -1110,10 +1103,6 @@ C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\compressed\a0jejrqj
 C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\compressed\ikadpct9zw-{0}-tjcz0u77k5-tjcz0u77k5.gz
 C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\compressed\24omok33vx-{0}-tptq2av103-tptq2av103.gz
 C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\compressed\rgjkgtwzpc-{0}-lfu7j35m59-lfu7j35m59.gz
-C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\compressed\w0lsswlmgp-{0}-eqq68aghwa-eqq68aghwa.gz
-C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\compressed\tnq3z2k0z4-{0}-5ic50dwmwj-5ic50dwmwj.gz
-C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\compressed\1bg2c733co-{0}-zyite9rl6a-zyite9rl6a.gz
-C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\compressed\erj7zkz6so-{0}-1ava3s3lny-1ava3s3lny.gz
 C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\staticwebassets.build.json.cache
 C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\staticwebassets.development.json
@@ -1124,3 +1113,14 @@ C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\EventEase.dll
 C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\refint\EventEase.dll
 C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\EventEase.pdb
 C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\ref\EventEase.dll
+C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\EventEase.1d7juumc95.wasm
+C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\EventEase.b2ikvq0dlr.pdb
+C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\dotnet.1gzal5agsg.js
+C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\EventEase.1d7juumc95.wasm.gz
+C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\EventEase.b2ikvq0dlr.pdb.gz
+C:\Users\litte\Desktop\eventease\EventEase\bin\Debug\net10.0\wwwroot\_framework\dotnet.1gzal5agsg.js.gz
+C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\compressed\cfgi8klkso-{0}-crs5ivhb3b-crs5ivhb3b.gz
+C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\compressed\w0lsswlmgp-{0}-1d7juumc95-1d7juumc95.gz
+C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\compressed\tnq3z2k0z4-{0}-b2ikvq0dlr-b2ikvq0dlr.gz
+C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\compressed\1bg2c733co-{0}-1gzal5agsg-1gzal5agsg.gz
+C:\Users\litte\Desktop\eventease\EventEase\obj\Debug\net10.0\compressed\erj7zkz6so-{0}-4w996rilg4-4w996rilg4.gz

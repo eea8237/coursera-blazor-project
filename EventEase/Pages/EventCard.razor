@@ -9,12 +9,47 @@
     [Parameter]
     public int Id {get; set;}
     private Event anEvent;
+    private User user;
+    private bool seeUsers = false;
 
     protected override void OnParametersSet()
     {
         // fetch event
-        anEvent = EventService.GetEvent(Id);
-        if (anEvent == null) NavManager.NavigateTo("/not-found");
+        List<Event> events = new List<Event>()
+        {
+            new Event {Name="event", Date="2/2/22", Location="someplace", Description="uhh"},
+            new Event {Name="othr event", Date="3/3/33", Location="somewhere", Description="um"},
+            new Event {Name="another event", Date="4/3/21", Location="idk", Description="oh"},
+            new Event {Name="real", Date="8/3/26", Location="here", Description="doh"}
+        };
+        foreach (var e in events) EventService.AddEvent(e);
+
+        try
+        {
+            anEvent = EventService.GetEvent(Id);
+        }
+        catch
+        {
+            NavManager.NavigateTo("/not-found");
+        }
+    }
+    private void RegisterUser()
+    {
+        anEvent.RegisteredUsers.Add(user);
+        StateHasChanged();
+        user = new User();
+    }
+
+    private void HandleUserAdded(User newUser)
+    {
+        user = newUser;
+        StateHasChanged();
+    }
+
+    private void HandleUserSelected(User selectedUser)
+    {
+        user = selectedUser;
+        StateHasChanged();
     }
 }
 
@@ -27,3 +62,18 @@
 <p>@anEvent?.Location</p>
 <h2>Description:</h2>
 <p>@anEvent?.Description</p>
+<h2>Registered Attendants:</h2>
+<p>@anEvent?.GetRegisteredString()</p>
+
+<h3>current user:</h3>
+<p>@user</p>
+
+<RegistrationForm OnUserAdded="HandleUserAdded" />
+
+<button @onclick="RegisterUser">Register for Event</button>
+
+<button @onclick="() => seeUsers = !seeUsers">See/Hide Users</button>
+@if (seeUsers)
+{
+    <UserList OnUserSelected="HandleUserSelected"/>
+}

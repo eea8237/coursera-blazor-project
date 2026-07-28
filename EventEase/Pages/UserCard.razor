@@ -1,0 +1,26 @@
+@using EventEase.Models
+@using EventEase.Services
+@inject NavigationManager NavManager
+@inject UserService UserService
+@page "/users/{id:int}"
+
+@code
+{
+    [Parameter]
+    public int Id {get; set;}
+    private User user;
+
+    protected override void OnParametersSet()
+    {
+        // fetch event
+        user = UserService.GetUser(Id);
+        if (user == null) NavManager.NavigateTo("/not-found");
+    }
+}
+
+<h2>Name:</h2>
+<p>@user?.Name</p>
+<h2>Email:</h2>
+<p>@user?.Email</p>
+<h2>Phone Number:</h2>
+<p>@user?.PhoneNumber</p>
