@@ -1,0 +1,51 @@
+@using EventEase.Models
+@using EventEase.Services
+@inject NavigationManager NavManager
+@inject EventService EventService
+
+@code
+{
+    [Parameter]
+    public Event DisplayEvent {get; set;}
+
+    private Dictionary<User, bool> registered;
+    private HashSet<User> attending = new HashSet<User>();
+    private bool showAttending = false;
+
+    protected override void OnParametersSet()
+    {
+        registered = DisplayEvent.RegisteredUsers;
+    }
+
+    private void UpdateAttending() 
+    {
+        foreach (var person in registered)
+        {
+            if (person.Value) attending.Add(person.Key);
+            else if (attending.Contains(person.Key)) attending.Remove(person.Key);
+        }
+        StateHasChanged();
+    }
+    private void HandleClick()
+    {
+        showAttending = !showAttending;
+        UpdateAttending();
+    }
+}
+
+@foreach (var person in registered.Keys)
+{
+    <label for="@person.Name">@person.Name</label>
+    <input type="checkbox" id="@person.Name" @bind-value="@registered[person]" />
+}
+<br />
+<button @onclick="HandleClick">Show/Hide Attended</button>
+@if (showAttending)
+{
+    @foreach (var person in attending)
+    {
+        <p>@person</p>
+    }
+}
+
+

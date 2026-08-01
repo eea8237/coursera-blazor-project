@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\litte\\Desktop\\eventease\\EventEase\\EventEase.csproj": {}
+    "C:\\Users\\litte\\Desktop\\eventease\\eventease\\EventEase.csproj": {}
   },
   "projects": {
-    "C:\\Users\\litte\\Desktop\\eventease\\EventEase\\EventEase.csproj": {
+    "C:\\Users\\litte\\Desktop\\eventease\\eventease\\EventEase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\litte\\Desktop\\eventease\\EventEase\\EventEase.csproj",
+        "projectUniqueName": "C:\\Users\\litte\\Desktop\\eventease\\eventease\\EventEase.csproj",
         "projectName": "EventEase",
-        "projectPath": "C:\\Users\\litte\\Desktop\\eventease\\EventEase\\EventEase.csproj",
+        "projectPath": "C:\\Users\\litte\\Desktop\\eventease\\eventease\\EventEase.csproj",
         "packagesPath": "C:\\Users\\litte\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\litte\\Desktop\\eventease\\EventEase\\obj\\",
+        "outputPath": "C:\\Users\\litte\\Desktop\\eventease\\eventease\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

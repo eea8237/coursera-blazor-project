@@ -18,7 +18,9 @@ namespace EventEase.Models
         public string? Location {get; set;}
         [StringLength(300, ErrorMessage = "Maximum description length is 300 characters.")]
         public string? Description {get; set;}
-        public List<User> RegisteredUsers {get; set;} = new List<User>();
+
+        // bool is false if user hasn't attended event, true if they have
+        public Dictionary<User, bool> RegisteredUsers {get; set;} = new Dictionary<User, bool>();
 
         public override string ToString()
         {
@@ -34,12 +36,13 @@ namespace EventEase.Models
         public string GetRegisteredString()
         {
             var registeredUsers = "";
+            List<User> registeredKeys = new List<User>(RegisteredUsers.Keys);
             try
             {
-                for (int i = 0; i < RegisteredUsers.Count; i++)
+                for (int i = 0; i < registeredKeys.Count; i++)
                 {
-                    if (i < RegisteredUsers.Count-1) registeredUsers += $"{RegisteredUsers[i].Name}, ";
-                    else registeredUsers += RegisteredUsers[i].Name;
+                    if (i < RegisteredUsers.Count-1) registeredUsers += $"{registeredKeys[i].Name}, ";
+                    else registeredUsers += registeredKeys[i].Name;
                 }    
             }
             catch

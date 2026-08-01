@@ -11,17 +11,12 @@
     private Event anEvent;
     private User user;
     private bool seeUsers = false;
+    private bool seeAttending = false;
 
     protected override void OnParametersSet()
     {
         // fetch event
-        List<Event> events = new List<Event>()
-        {
-            new Event {Name="event", Date="2/2/22", Location="someplace", Description="uhh"},
-            new Event {Name="othr event", Date="3/3/33", Location="somewhere", Description="um"},
-            new Event {Name="another event", Date="4/3/21", Location="idk", Description="oh"},
-            new Event {Name="real", Date="8/3/26", Location="here", Description="doh"}
-        };
+        List<Event> events = EventService.TestEvents;
         foreach (var e in events) EventService.AddEvent(e);
 
         try
@@ -35,7 +30,7 @@
     }
     private void RegisterUser()
     {
-        anEvent.RegisteredUsers.Add(user);
+        anEvent.RegisteredUsers.Add(user, false);
         StateHasChanged();
         user = new User();
     }
@@ -65,6 +60,7 @@
 <h2>Registered Attendants:</h2>
 <p>@anEvent?.GetRegisteredString()</p>
 
+<hr />
 <h3>current user:</h3>
 <p>@user</p>
 
@@ -76,4 +72,11 @@
 @if (seeUsers)
 {
     <UserList OnUserSelected="HandleUserSelected"/>
+}
+<hr />
+<button @onclick="() => seeAttending = !seeAttending">See/Hide Attendance Tracker</button>
+@if (seeAttending)
+{
+    <br />
+    <AttendanceTracker DisplayEvent="anEvent"/>
 }
